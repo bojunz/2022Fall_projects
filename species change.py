@@ -142,3 +142,4 @@ for p in range(10):
 counter = Counter(fish)
 print(counter)
 counter.most_common(5)
+#111

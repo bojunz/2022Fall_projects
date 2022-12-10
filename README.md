@@ -1,6 +1,6 @@
 # 2022Fall_projects
 
-# Monte Carlo Simulation<br>
+# Fishing Monte Carlo Simulation<br>
 Atlantic Coastline Fishing<br>
 ![image](https://github.com/yibow5/2022Fall_projects/blob/main/Images/FishGraph.png)
 

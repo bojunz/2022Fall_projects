@@ -19,11 +19,11 @@ summer_days = datetime(2021, 7, 1), datetime(2021, 9, 30)
 
 
 def get_dict_fish(date):
-    """Given a date range, return a dictionary of fish species and numbers of each caught that day.
-    :param date: datetime format of start date and end date.
-    >>> test_date = datetime(2021,1, 1),datetime(2021,1, 10)
-    >>> list(get_dict_fish(test_date).items())[0]
-    ('2021-01-01', {'SAND SEATROUT': 11, 'SHEEPSHEAD': 10, 'SOUTHERN KINGFISH': 6, 'WHITE GRUNT': 5, 'HARDHEAD CATFISH': 4, 'GRAY SNAPPER': 4, 'WHITE CATFISH': 2, 'ATLANTIC CROAKER': 1, 'RED DRUM': 1, 'BLACK DRUM': 1})
+    """Given a date range, return a dictionary of fish species and numbers of each caught that day. :param date:
+    datetime format of start date and end date. >>> test_date = datetime(2021,1, 1),datetime(2021,1, 10) >>> list(
+    get_dict_fish(test_date).items())[0] ('2021-01-01', {'SAND SEATROUT': 11, 'SHEEPSHEAD': 10, 'SOUTHERN KINGFISH':
+    6, 'WHITE GRUNT': 5, 'HARDHEAD CATFISH': 4, 'GRAY SNAPPER': 4, 'WHITE CATFISH': 2, 'ATLANTIC CROAKER': 1,
+    'RED DRUM': 1, 'BLACK DRUM': 1})
     """
     daterange = pd.date_range(date[0], date[-1])
     dict_name = {}

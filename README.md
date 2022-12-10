@@ -18,7 +18,7 @@ Used columns are year, common, length, weight, and date. <br>
 
 Project Scenario<br>
 1.The average fish length in winter is greater than the fish caught in summer.<br>
-2.The South Atlantic region has more variety of fish than the North Atlantic region. <br>
+2.Based on simulation of fish vary varieties in north, mid, south area of Atlantic and Gulf Mexico area respectively, simulate further about fishing strategy. <br>
 3.The use of lures will affect the abundant of fish species and structure of fish caught<br>
 
 Scenario-1<br>

@@ -35,14 +35,15 @@ Run the simulation for 1000 times<br>
 
 
 ### Scenario-2<br>
-* If you wanna More Species in a long-trip but in time as short as you can<br>
+### If you wanna More Species in a long-trip but in time as short as you can<br>
+<br>
 Assumption:
 * 1. fish distribution vary in different regions(with vary appear probability)
 * 2. angler can catch fish in each laying rod
 * 3. angler took trip in single area
    
 #### Running simulation of single region fishing for 500 times<br>
-region<br>:
+region:<br>
 4   = North Atlantic (ME; NH; MA; RI; CT) <br>
 5   = Mid-Atlantic (NY; NJ; DE; MD; VA) <br>
 6   = South Atlantic (NC; SC; GA; EFL)<br>
@@ -51,12 +52,12 @@ region<br>:
 11 = U. S. Caribbean (Puerto Rico and Virgin Islands (data invalid)<br>
 ![image](https://github.com/yibow5/2022Fall_projects/blob/main/Images/Scenario2.png)<br>
 Results: The South Atlantic-region6 has the most species, <br>
-         then the Gulf of Mexico - region 7, the Mid-Atlantic - region 5, and the North Atlantic - region 4 has the fewest.<br>
-         The total species is 38.(After filtering the prob < 0.5%)<br>
+			then the Gulf of Mexico - region 7, the Mid-Atlantic - region 5, and the North Atlantic - region 4 has the fewest.<br>
+			The total species is 38.(After filtering the prob < 0.5%)<br>
          
 
 Based on Results of simulation of single region fishing trip:<br>
-  New Assumption:<br>
+	New Assumption:<br>
   * 1. fish distribution vary in different regions(with vary appear probability)<br>
   * 2. angler can catch fish in each laying rod<br>
   * 3. angler took trip for more species(35) only in region 5, region 6 and region 7 (because the three regions can cover the number 35)<br>

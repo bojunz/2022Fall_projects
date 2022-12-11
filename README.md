@@ -52,17 +52,20 @@ region:<br>
 8   = West Pacific (HI) (data invalid)<br>
 11 = U. S. Caribbean (Puerto Rico and Virgin Islands (data invalid)<br>
 ![image](https://github.com/yibow5/2022Fall_projects/blob/main/Images/Scenario2.png)<br>
+<br>
 Results: The South Atlantic-region6 has the most species, <br>
-			then the Gulf of Mexico - region 7, the Mid-Atlantic - region 5, and the North Atlantic - region 4 has the fewest.<br>
-			The total species is 38.(After filtering the prob < 0.5%)<br>
-         
+	then the Gulf of Mexico - region 7, the Mid-Atlantic - region 5, and the North Atlantic - region 4 has the fewest.<br>
+	The total species is 38.(After filtering the prob < 0.5%)<br>
+<br>
+<br>
 
 Based on Results of simulation of single region fishing trip:<br>
 	New Assumption:<br>
    1. fish distribution vary in different regions(with vary appear probability)<br>
    2. angler can catch fish in each laying rod<br>
    3. angler took trip for more species(35) only in region 5, region 6 and region 7 (because the three regions can cover the number 35)<br>
-  
+<br>
+<br>
 #### Running simulation of single region fishing for unknown times<br>
 [INSERT PIC]<br>
 Results: There should be the shortest time in printing lines. Which around 180 times, with the times in each region separately.<br>

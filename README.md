@@ -21,7 +21,7 @@ NOAA Fish-Level Dataset<br>
 2.Based on simulation of fish vary varieties in north, mid, south area of Atlantic and Gulf Mexico area respectively, simulate further about fishing strategy. <br>
 3.The use of lures will affect the abundant of fish species and structure of fish caught<br>
 
-## Scenario-1<br>
+### Scenario-1<br>
 
 * The average fish length in winter is greater than the fish caught in summer.<br>
 * Set fish stats (common, lgth, wgt) based on different season.<br>
@@ -30,29 +30,47 @@ NOAA Fish-Level Dataset<br>
 Run the simulation for 1000 times<br>
 ![image](https://github.com/yibow5/2022Fall_projects/blob/main/Images/Sceniro1.png)<br><img src="https://github.com/yibow5/2022Fall_projects/blob/main/Images/Scenario1.1.png" width="500" height="250">
 
-## Conclusion
-The output dataframe and final result is written to record.txt file.
 
 
 
 
-
-## Scenario-2<br>
-* If you wanna More Species in a long-trip<br>
+### Scenario-2<br>
+* If you wanna More Species in a long-trip but in time as short as you can<br>
+Assumption:
+** 1. fish distribution vary in different regions(with vary appear probability)
+   2. angler can catch fish in each laying rod
+   3. angler took trip in single area
+   
+#### Running simulation of single region fishing for 500 times
+region:
 4   = North Atlantic (ME; NH; MA; RI; CT) <br>
 5   = Mid-Atlantic (NY; NJ; DE; MD; VA) <br>
 6   = South Atlantic (NC; SC; GA; EFL)<br>
 7   = Gulf of Mexico (WFL; AL; MS; LA) <br>
-8   = West Pacific (HI)<br>
-11 = U. S. Caribbean (Puerto Rico and Virgin Islands<br>
+8   = West Pacific (HI) (data invalid)<br>
+11 = U. S. Caribbean (Puerto Rico and Virgin Islands (data invalid)<br>
 ![image](https://github.com/yibow5/2022Fall_projects/blob/main/Images/Scenario2.png)<br>
+Results: The South Atlantic-region6 has the most species, 
+         then the Gulf of Mexico - region 7, the Mid-Atlantic - region 5, and the North Atlantic - region 4 has the fewest.
+         The total species is 38.(After filtering the prob < 0.5%)
+         
 
-## Scenario-3<br>
-### Effects of different baits on species richness and structural number of fishing
-* According to probability, all fish are divided into three categories: rare (47 species), advanced (46 species), and common (46 species).<br>
-* There are three types of bait, no-bait, shrimp (regular bait), mackerel (premium bait)<br>
-* Shrimp (normal bait) can raise rare fish probability to advanced fish probability<br>
-* mackerel (premium bait) can raise the probability of rare fish to common fish probability<br>
+Based on Results of simulation of single region fishing trip:
+  New Assumption:
+  ** 1. fish distribution vary in different regions(with vary appear probability)
+  ** 2. angler can catch fish in each laying rod
+  ** 3. angler took trip for more species(35) only in region 5, region 6 and region 7 (because the three regions can cover the number 35)
+  
+#### Running simulation of single region fishing for unknown times
+[INSERT PIC]
+Results: There should be the shortest time in printing lines. Which around 180 times, with the times in each region separately.
+  
+  
+
+### Scenario-3<br>
+* Species richness can be affected by the use of superior baits<br>
+* Each fish has a chance of catching with normal bait<br>
+* Premium baits increase the chance of catching some fish<br>
 
 #### The base probability of the fish caught<br>
 <!-- ![image](https://github.com/yibow5/2022Fall_projects/blob/main/Images/Base%20Probability%20.png)<br> -->
@@ -63,13 +81,7 @@ The output dataframe and final result is written to record.txt file.
 * Catch 100 fish at a time and check out the different species
 * Loop 100 times
 <!-- ![image](https://github.com/yibow5/2022Fall_projects/blob/main/Images/NoLure_abundant.png)<br> -->
-#### No bait abundant <br>
 <img src="https://github.com/yibow5/2022Fall_projects/blob/main/Images/NoLure_abundant.png" height="455">
-#### Shrimp abundant
-<img src="https://github.com/yibow5/2022Fall_projects/blob/main/Images/Shrimp_abundant.png" height="455">
-#### Mackerel abundant
-<img src="https://github.com/yibow5/2022Fall_projects/blob/main/Images/Mackerel_abundant.png" height="455"><br>
-
 
 
 #### Average change in fish species<br>
@@ -84,11 +96,6 @@ The output dataframe and final result is written to record.txt file.
 The common fish with a high probability changed more, and the rare fish changed less<br>
 <!-- ![image](https://github.com/yibow5/2022Fall_projects/blob/main/Images/Bait_structure.png)<br> -->
 <img src="https://github.com/yibow5/2022Fall_projects/blob/main/Images/Bait_structure.png" height="455">
-
-## Conclusion
-* The variability that can arise in a sampling program using different types of baits. A total of 139 fish species were recorded. Fish assemblage structure and richness varied significantly between different baits.<br>
-* In terms of richness, the improvement of premium bait (mackerel) is the most obvious, with 57 different species in 100 fish, followed by common bait (shrimp), with an average of 44 different species in 100 fish.<br>
-* For the structure change of fish quantity, premium bait or common bait has little effect on rare fish, but the structure change of common fish is larger. It is speculated that because the probability of rare fish and high-level fish increases, they are easier to be caught When it arrives, the number of common fish will be relatively reduced.
 
 
 

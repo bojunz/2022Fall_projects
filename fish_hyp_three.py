@@ -134,7 +134,7 @@ def number(bait):
 #generate dataframe
 def structure(shrimp_number,Mackerel_number,nolure_number):
     same = set(shrimp_number).intersection(set(Mackerel_number)).intersection(set(nolure_number))
-    df_training = pd.DataFrame(np.nan, index=same, columns=['nolure','shrimp','Mackerel'])
+    df_training = pd.DataFrame(np.nan, index=list(same), columns=['nolure','shrimp','Mackerel'])
     for i in same:
         df_training.at[i,'nolure'] = int(nolure_number[i])
         df_training.at[i,'shrimp'] = int(shrimp_number[i])
@@ -154,6 +154,7 @@ Mackerel = copy.deepcopy(species_result)
 shrimp = copy.deepcopy(species_result)
 no_lure = copy.deepcopy(species_result)
 
+#Increase the probability of rare fish depending on the bait
 for i,k in species_result.items():
     if k<0.06:
         Mackerel[i]=k+1.95
@@ -169,10 +170,12 @@ mean_sepcies(50,100,with_Mackerel)
 mean_sepcies(50,100,with_shrimp)
 mean_sepcies(50,100,no_lure)
 
+#Look at the average of different kinds every 50 times, and loop 20 times
 df_shirmp = mean_change(20,50,100,with_shrimp)
 df_nolure = mean_change(20,50,100,no_lure)
 df_Mackerel=mean_change(20,50,100,with_Mackerel)
 
+#fish abundant graph
 fig, ax = plt.subplots()
 x = df_shirmp['count']
 y = df_shirmp['mean_sepcies']
@@ -195,4 +198,4 @@ shrimp_number = number(with_shrimp)
 Mackerel_number = number(with_Mackerel)
 nolure_number = number(no_lure)
 
-structure(shrimp_number,Mackerel_number,nolure_number)
+print(structure(shrimp_number,Mackerel_number,nolure_number))

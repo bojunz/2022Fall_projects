@@ -37,10 +37,10 @@ Run the simulation for 1000 times<br>
 ### Scenario-2<br>
 ### If you wanna More Species in a long-trip but in time as short as you can<br>
 <br>
-Assumption:
-* 1. fish distribution vary in different regions(with vary appear probability)
-* 2. angler can catch fish in each laying rod
-* 3. angler took trip in single area
+Assumption:<br>
+	1. fish distribution vary in different regions(with vary appear probability)
+ 	2. angler can catch fish in each laying rod
+	3. angler took trip in single area
    
 #### Running simulation of single region fishing for 500 times<br>
 region:<br>
@@ -58,9 +58,9 @@ Results: The South Atlantic-region6 has the most species, <br>
 
 Based on Results of simulation of single region fishing trip:<br>
 	New Assumption:<br>
-  * 1. fish distribution vary in different regions(with vary appear probability)<br>
-  * 2. angler can catch fish in each laying rod<br>
-  * 3. angler took trip for more species(35) only in region 5, region 6 and region 7 (because the three regions can cover the number 35)<br>
+   1. fish distribution vary in different regions(with vary appear probability)<br>
+   2. angler can catch fish in each laying rod<br>
+   3. angler took trip for more species(35) only in region 5, region 6 and region 7 (because the three regions can cover the number 35)<br>
   
 #### Running simulation of single region fishing for unknown times<br>
 [INSERT PIC]<br>

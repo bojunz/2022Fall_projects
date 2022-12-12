@@ -164,6 +164,9 @@ def main(random_seed):
     result = outdf.groupby(['season'])[['length', 'weight']].apply(np.mean)
     lengthRes = result['length']['summer'] > result['length']['winter']
     weightRes = result['weight']['summer'] > result['weight']['winter']
+    length_winter = result['length']['winter']
+    length_summer = result['length']['summer']
+
 
     if lengthRes and weightRes:
         winner = 'Summer is the winner.'
@@ -174,6 +177,8 @@ def main(random_seed):
 
     outdf.to_csv('record.txt', mode='a', sep='\t', index=True, header=True)
     f = open('record.txt', mode='a')
+    f.writelines(f'Average length for fish caught in winter is {round(length_winter,2)}mm \n')
+    f.writelines(f'Average length for fish caught in summer is {round(length_summer,2)}mm \n')
     f.writelines([winner, '\n\n'])
     f.close()
     return winner

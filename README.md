@@ -31,7 +31,11 @@ Run the simulation for 1000 times<br>
 ![image](https://github.com/yibow5/2022Fall_projects/blob/main/Images/Sceniro1.png)<br><img src="https://github.com/yibow5/2022Fall_projects/blob/main/Images/Scenario1.1.png" width="500" height="250">
 
 ## Conclusion
-The output dataframe and final result is written to record.txt file.
+* Average length for fish caught in winter is 439.08mm <br>
+* Average length for fish caught in summer is 426.76mm <br>
+* Winter is the winner.<br>
+* According to the simulation result, hypothesis 1 is verified.<br>
+#### The output dataframe and final result is written to record.txt file.
 
 
 
@@ -53,7 +57,7 @@ The output dataframe and final result is written to record.txt file.
 11 = U. S. Caribbean (Puerto Rico and Virgin Islands<br>
 ![image](https://github.com/yibow5/2022Fall_projects/blob/main/Images/Scenario2.png)<br>
 
-### Results: The South Atlantic-region6 has the most species, <br>
+### Results: The South Atlantic-region6 has the most species <br>
 then the Gulf of Mexico - region 7, the Mid-Atlantic - region 5, and the North Atlantic - region 4 has the fewest. <br>
 The total species is 38.(After filtering the prob < 0.5%) <br>
 
@@ -66,7 +70,7 @@ New Assumption: <br>
 
 #### Running simulation of single region fishing for unknown times <br>
 [INSERT PIC] <br>
-Results: There should be the shortest time in printing lines. Which around 180 times, with the times in each region separately. <br>
+#### Conclusion: There should be the shortest time in printing lines. Which around 180 times, with the times in each region separately. <br>
 ## Scenario-3<br>
 ### Effects of different baits on species richness and structural number of fishing
 * According to probability, all fish are divided into three categories: rare (47 species), advanced (46 species), and common (46 species).<br>

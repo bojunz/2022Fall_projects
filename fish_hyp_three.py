@@ -71,6 +71,7 @@ def getSpecies(bait, prob):
     else:
         return None
 
+#Generate the characteristics of each fish caught
 def generateInfor(bait, prob):
     species = getSpecies(bait, prob)
     feature = feature_result[species]
@@ -81,15 +82,26 @@ def generateInfor(bait, prob):
 #Look for changes in fish abundance
 #Catch 100 fish at a time. Catch 100 times
 def mean_sepcies(number_round,fishing_count,bait):
+    """
+    This function is to look at the different species of fish there are in each catch round,
+    and loop many times.
+    :param number_round: How many times fishing
+    :param fishing_count: How many fish to catch at a time
+    :param bait: Different baits have different rates of catching fish
+    """
     total = []
     for p in range(number_round):
         un_species=[]
+        #How many fish catch each time
         for t in range(fishing_count):
             prob=random.random()
             info=generateInfor(bait,prob)[0]
+            #Put the species of fish in the list
             un_species.append(info)
+        #Take the unique species and count how many different species there are each time
         uni = set(un_species)
         total.append([p,len(uni)])
+    #make a dataframe about fish abundant
     df =pd.DataFrame(total,columns=['count','total_species'])
     fig, ax = plt.subplots()
     x = df['count']
@@ -105,6 +117,14 @@ def mean_sepcies(number_round,fishing_count,bait):
 
 # The average species per 100 cycles, 20 cycles
 def mean_change(total_round, number_round, fishing_times, bait):
+    """
+    This function is based on the mean_species function,
+    which generates an average value for better observation.
+    :param total_round: The value is the average value of number_round
+    :param number_round: How many times fishing
+    :param fishing_times: How many fish to catch at a time
+    :param bait: Different baits have different rates of catching fish
+    """
     res = []
     for i in range(total_round):
         a = mean_sepcies(number_round, fishing_times, bait)
@@ -123,16 +143,20 @@ def mean_change(total_round, number_round, fishing_times, bait):
 
 #Look for structural changes in the fish
 def number(bait):
+    #Create a list of all the species and quantities of 100 fish caught
     fish=[]
     for t in range(100):
         prob=random.random()
         info=generateInfor(bait,prob)
         fish.append(info[0])
+    #Generate a dictionary to look at the species of fish and their quantities
     counter = Counter(fish)
     return counter
 
 #generate dataframe
 def structure(shrimp_number,Mackerel_number,nolure_number):
+    #Confirm the same species of three different baits
+    #Use the dataframe for comparison
     same = set(shrimp_number).intersection(set(Mackerel_number)).intersection(set(nolure_number))
     df_training = pd.DataFrame(np.nan, index=list(same), columns=['nolure','shrimp','Mackerel'])
     for i in same:
@@ -144,9 +168,9 @@ def structure(shrimp_number,Mackerel_number,nolure_number):
     df_training['Mackerel'] = df_training['Mackerel'].astype(int)
     return df_training
 
-'''Total 139 fish species, probability less than 0.06 is an interval (number 47, mean probability 0.026), 
-probability between 0.06 and 0.35 is an interval (number 46, mean probability 0.168), 
-probability greater than 0.35 is an interval (number 46, mean probability 1.97)'''
+'''Total 139 fish species, probability less than 0.06 is an interval (number 47, mean probability 0.026, rare fish), 
+probability between 0.06 and 0.35 is an interval (number 46, mean probability 0.168, advanced fish), 
+probability greater than 0.35 is an interval (number 46, mean probability 1.97, common fish)'''
 
 #Two types of baits were formulated, mackerel as the superior bait,
 # shrimp as the normal bait and nolure as the no-bait control
@@ -155,6 +179,8 @@ shrimp = copy.deepcopy(species_result)
 no_lure = copy.deepcopy(species_result)
 
 #Increase the probability of rare fish depending on the bait
+#Mackerel can raise probability of rare fish to common fish probability
+#shrimp can raise the probability of rare fish to advanced fish probability
 for i,k in species_result.items():
     if k<0.06:
         Mackerel[i]=k+1.95
